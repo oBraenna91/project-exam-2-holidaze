@@ -13,6 +13,7 @@ function Header() {
         removeLocalStorageItem('token');
         removeLocalStorageItem('user');
         window.location.href = '/logout';
+        console.log('hei');
     }
 
 
