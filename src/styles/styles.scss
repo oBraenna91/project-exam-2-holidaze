@@ -1,0 +1,72 @@
+@import "./variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+background-image: url( "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 1%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
+}
+
+.venue-card {
+    border:none;
+    border-radius: 20px;
+}
+
+.card-image {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.custom-button {
+    background-color: $secondary;
+    border: none;
+    padding: 8px 50px;
+    border-radius: 30px;
+    color: #FFF;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.search-bar {
+    border: 2px solid $primary;
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+    color: $primary;
+    font-weight: 900;
+}
+
+h2 {
+    color: $primary;
+    font-weight: 600;
+}
+
+.nav-link {
+    font-size: large;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* REACT CALENDAR */
+
+.react-calendar {
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #888888;
+    border:none;
+    margin: auto;
+    margin-bottom: 20px;
+}
