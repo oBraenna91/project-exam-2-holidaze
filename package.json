@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-private-property-in-object": "^7.22.11",
     "live-server": "^1.2.2",
     "sass": "^1.66.1"
   }
