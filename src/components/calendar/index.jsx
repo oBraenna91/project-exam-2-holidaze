@@ -58,6 +58,20 @@ export function MyCalendar({ venue, onDatesSelected }) {
         }
       }
 
+      function tileContent({ date, view }) {
+        const isTileDisabled = tileDisabled({ date, view }); // Check if the tile is disabled
+      
+        if (isTileDisabled) {
+          return (
+            <div className="unavailable-circle"></div>
+          );
+        } else {
+          return (
+            <div className="available-circle"></div>
+          );
+        }
+      }
+
       useEffect(() => {
         onDatesSelected(selectedDates);
       }, [selectedDates, onDatesSelected]);
@@ -66,7 +80,13 @@ export function MyCalendar({ venue, onDatesSelected }) {
     return(
         <div>
             <h3 className="mt-5 mb-3">Availability</h3>
-            <Calendar className="calendar-header" onChange={handleDateChange} value={selectedDates} tileDisabled={tileDisabled}/>
+            <Calendar 
+            className="calendar-header" 
+            onChange={handleDateChange} 
+            value={selectedDates} 
+            tileDisabled={tileDisabled}
+            tileContent={tileContent} 
+            />
         </div>
     )
 }
