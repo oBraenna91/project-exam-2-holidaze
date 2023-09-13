@@ -45,5 +45,5 @@ export function RenderIcons({ meta }) {
             ))}
         </div>
     );
-};
+}
 export default RenderIcons;

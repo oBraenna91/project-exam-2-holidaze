@@ -6,11 +6,11 @@ export function header() {
         'Content-Type' : 'application/json',
         Authorization: `Bearer ${token}`
     }
-};
+}
 
 export function authFetch(url, options = {}) {
     return fetch(url, {
         ...options,
         headers: header()
     })
-};
+}

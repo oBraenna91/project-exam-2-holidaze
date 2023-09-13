@@ -1,3 +1,5 @@
+import React from 'react';
+
 export function CustomButton({label, onClick, className}) {
     return <button className={`custom-button ${className}`}
             onClick={onClick}>
