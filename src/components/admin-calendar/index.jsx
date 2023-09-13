@@ -24,7 +24,7 @@ export function AdminCalendar({ bookings }) {
   return (
     <div>
       <h3 className="mt-5 mb-3">Availability</h3>
-      <Calendar tileDisabled={tileDisabled} />
+      <Calendar className="calendar-header" tileDisabled={tileDisabled} />
     </div>
   );
 }
