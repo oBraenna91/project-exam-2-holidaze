@@ -1,18 +1,17 @@
 import React from 'react';
-import Image from 'react-bootstrap/Image';
 import logoImage from '../../logo/dark_logo.png'
-import BreakfastIcon from '../icons/breakfast';
-import ParkingIcon from '../icons/parking';
-import PetsIcon from '../icons/pets';
-import WifiIcon from '../icons/wifi';
+// import BreakfastIcon from '../icons/breakfast';
+// import ParkingIcon from '../icons/parking';
+// import PetsIcon from '../icons/pets';
+// import WifiIcon from '../icons/wifi';
 import CustomButton from '../button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 export function AdminCard({ venue }) {
-     const {name, media, location, description, rating, price, meta, maxGuests} = venue;
+     const {name, media, location} = venue;
     // const mediaUrl = media.length > 0 ? media[0] : logoImage;
-    const mediaUrl = venue.media.length > 0 ? venue.media[0] : logoImage;
+    const mediaUrl = media.length > 0 ? media[0] : logoImage;
 
     console.log(venue);
 

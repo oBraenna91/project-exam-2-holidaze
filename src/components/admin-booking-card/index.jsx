@@ -2,7 +2,7 @@ import Card from 'react-bootstrap/Card';
 
 export function AdminBookingCard({booking}) {
 
-    const {created, dateFrom, dateTo, guests, id, updated} = booking;
+    const {created, dateFrom, dateTo, guests} = booking;
 
     return (
         <Card className="my-3 ms-2 me-4 shadow-lg m-auto venue-card" style={{ width: '16rem', flex: '0 0 auto' }}>

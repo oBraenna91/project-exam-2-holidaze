@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import createVenue from '../../hooks/useCreateVenue';
-import { useForm } from 'react-hook-form';
+// import createVenue from '../../hooks/useCreateVenue';
+// import { useForm } from 'react-hook-form';
 import CreateVenueForm from '../create-venue-form';
 
 export function TestCreateVenueModal() {
