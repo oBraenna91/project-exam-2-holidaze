@@ -5,7 +5,7 @@ import AvatarModal from '../../avatar-modal';
 import BookingCard from '../../user-bookings';
 
 export function ProfileLayout({ profile }) {
-    const {name, avatar, venueManager, email, _count, bookings, venues} = profile;
+    const {name, avatar, venueManager, bookings} = profile;
     const avatarUrl = avatar ? avatar : alternativeAvatar;
 
     const currentDate = new Date(); // Get the current date

@@ -17,8 +17,8 @@ export const loginUser = async (userData) => {
     
     if(result.accessToken) {
         const {accessToken, ...user} = result;
-        setLocalStorageItem('token', result.accessToken);
-        setLocalStorageItem('user', result);
+        setLocalStorageItem('token', accessToken);
+        setLocalStorageItem('user', user);
         alert('Successfully logged in!')
 
     } else {
