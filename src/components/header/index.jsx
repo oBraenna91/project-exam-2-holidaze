@@ -13,13 +13,20 @@ function Header() {
         removeLocalStorageItem('token');
         removeLocalStorageItem('user');
         window.location.href = '/logout';
-        console.log('hei');
     }
 
 
-    const isLoggedIn = !!localStorage.getItem('token');
+    const isLoggedIn = !!localStorage.getItem('token') || false;
     const userInfo = getLocalStorageItem('user');
-    const isVenueManager = !!userInfo.venueManager;
+    const isVenueManager = userInfo?.venueManager || false;
+
+    const handleProfileClick = () => {
+      if (!isLoggedIn) {
+          // User is not logged in, show alert and redirect to /login
+          alert('You are not logged in');
+          window.location.href= '/login';
+      }
+    }
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -29,7 +36,7 @@ function Header() {
             <Logo />
         </Navbar.Brand>
         <Navbar.Brand className="col-1">
-            <Link to={`/profile`}>
+            <Link to={`/profile`} onClick={handleProfileClick}>
                 <UserIcon />
             </Link>
         </Navbar.Brand>
