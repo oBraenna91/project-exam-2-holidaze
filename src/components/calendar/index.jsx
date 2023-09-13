@@ -66,7 +66,7 @@ export function MyCalendar({ venue, onDatesSelected }) {
     return(
         <div>
             <h3 className="mt-5 mb-3">Availability</h3>
-            <Calendar onChange={handleDateChange} value={selectedDates} tileDisabled={tileDisabled}/>
+            <Calendar className="calendar-header" onChange={handleDateChange} value={selectedDates} tileDisabled={tileDisabled}/>
         </div>
     )
 }
