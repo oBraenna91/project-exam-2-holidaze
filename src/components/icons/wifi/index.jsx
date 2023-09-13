@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'react-bootstrap/Image';
 import wifiIcon from '../../../icons/blue_wifi.png';
 

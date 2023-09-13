@@ -28,6 +28,7 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "no-unused-vars": ["warn", { "varsIgnorePattern": "isUpdating" }]
+        "no-unused-vars": ["warn", { "varsIgnorePattern": "isUpdating" }],
+        "react/prop-types": 0
     }
 }

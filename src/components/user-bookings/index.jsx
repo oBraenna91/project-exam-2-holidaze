@@ -1,6 +1,7 @@
+import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
-import logoImage from '../../logo/dark_logo.png';
+// import { Link } from 'react-router-dom';
+// import logoImage from '../../logo/dark_logo.png';
 import BreakfastIcon from '../icons/breakfast';
 import WifiIcon from '../icons/wifi';
 import ParkingIcon from '../icons/parking';
@@ -13,8 +14,8 @@ import NoParkingIcon from '../icons/no-parking';
 export function BookingCard({ booking }) {
 
     const { 
-        guests, dateFrom, dateTo, id, 
-        venue: {name, location, meta, media, price, rating,},
+        guests, dateFrom, dateTo, 
+        venue: {name, meta, media,},
         } = booking;
     
     function formatDate(dateString) {

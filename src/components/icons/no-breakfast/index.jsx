@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'react-bootstrap/Image';
 import noBreakfastIcon from '../../../icons/blue_no-breakfast.png';
 
