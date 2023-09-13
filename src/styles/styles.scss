@@ -69,6 +69,8 @@ h2 {
     text-decoration: underline;
 }
 
+
+
 /* REACT CALENDAR */
 
 .react-calendar {
@@ -143,6 +145,14 @@ h2 {
     border-radius: 5%;
 }
 
+.mini-card a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .mini-card-text {
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -157,4 +167,8 @@ h2 {
 .mini-card-img-container, .mini-card-img {
     max-height: 75px;
     max-width: 75px;
+}
+
+.mini-location {
+    margin-bottom: 0;
 }
