@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import useSearch from '../../hooks/useSearch';
+import MiniCard from '../mini-card';
 
 export function SearchBar(props) {
    const { searchValue, searchResults, handleSearchValueChange } = useSearch(props.venues);
 
   return (
-    <div>
+    <div className="search-container">
         <Form className="d-flex flex-column">
             <input 
             className="search-bar m-auto rounded-pill mb-5 input-button px-4 py-1 col-12"
@@ -21,13 +21,9 @@ export function SearchBar(props) {
         </Form>
         {searchValue && (
             <div className="mt-1 mb-5 p-5 shadow-lg rounded-5">
-                <h3 className="text-primary">Search results:</h3>
+                <h3 className="text-primary underline-text">Search results:</h3>
                 {searchResults.map((venue) => (
-                    <div className="my-1" key={venue.id}>
-                        <Link to={`venue/${venue.id}`} className="text-primary">
-                            {venue.name.toUpperCase()}
-                        </Link>
-                    </div>
+                    <MiniCard venue={venue} key={venue.id}/>
                 ))}
             </div>
         )}
