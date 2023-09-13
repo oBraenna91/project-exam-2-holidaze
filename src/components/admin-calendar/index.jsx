@@ -16,6 +16,20 @@ export function AdminCalendar({ bookings }) {
     }
   });
 
+  function tileContent({ date, view }) {
+    const isTileDisabled = tileDisabled({ date, view }); // Check if the tile is disabled
+  
+    if (isTileDisabled) {
+      return (
+        <div className="unavailable-circle"></div>
+      );
+    } else {
+      return (
+        <div className="available-circle"></div>
+      );
+    }
+  }
+
   function tileDisabled({ date }) {
     // Check if the date is in the list of disabled dates
     return disabledDates.some((disabledDate) => date.getTime() === disabledDate.getTime());
@@ -24,7 +38,11 @@ export function AdminCalendar({ bookings }) {
   return (
     <div>
       <h3 className="mt-5 mb-3">Availability</h3>
-      <Calendar className="calendar-header" tileDisabled={tileDisabled} />
+      <Calendar
+      className="calendar-header" 
+      tileDisabled={tileDisabled} 
+      tileContent={tileContent}
+      />
     </div>
   );
 }
