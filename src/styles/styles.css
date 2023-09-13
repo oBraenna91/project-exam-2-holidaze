@@ -13870,6 +13870,14 @@ h2, .h2 {
   border-radius: 5%;
 }
 
+.mini-card a {
+  text-decoration: none;
+}
+
+.mini-card a:hover {
+  text-decoration: underline;
+}
+
 .mini-card-text {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -13888,5 +13896,9 @@ h2, .h2 {
 .mini-card-img-container, .mini-card-img {
   max-height: 75px;
   max-width: 75px;
+}
+
+.mini-location {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=styles.css.map */
