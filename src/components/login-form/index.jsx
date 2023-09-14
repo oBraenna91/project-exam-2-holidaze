@@ -25,7 +25,7 @@ export function LoginForm() {
         <form onSubmit={handleSubmit}>
           <label>
             <input 
-            className="mt-3"
+            className="mt-3 form-input"
             type="email" 
             value={email} 
             onChange={(e) => setEmail(e.target.value)} 
@@ -34,7 +34,7 @@ export function LoginForm() {
           <br />
           <label>
             <input 
-            className="my-3"
+            className="my-3 form-input"
             type="password" 
             value={password} 
             onChange={(e) => setPassword(e.target.value)} 
