@@ -41,12 +41,6 @@ export function AvatarModal() {
                 />
             </Modal.Body>
             <Modal.Footer>
-            <Button variant="danger" onClick={handleClose}>
-                Close
-            </Button>
-            {/* <Button variant="secondary" onClick={handleUpdateAvatar}>
-                UPDATE
-            </Button> */}
             <ConfirmationModal
             buttonTitle="Update avatar"
             title="Are you sure?"
