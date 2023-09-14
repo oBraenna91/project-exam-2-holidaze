@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import loginUser from '../../hooks/auth/login';
 import { extractLoginData } from '../../helpers/login';
+import CustomButton from '../button';
 
 export function LoginForm() {
     const [email, setEmail] = useState('');
@@ -12,8 +13,7 @@ export function LoginForm() {
       try {
         const loginData = extractLoginData(email, password);
         await loginUser(loginData) 
-        
-        // Other handling as needed, such as redirecting the user
+        window.location.href='/profile';
       } catch (error) {
         console.error('Error logging in:', error);
       }
@@ -21,19 +21,31 @@ export function LoginForm() {
   
     return (
       <div>
-        <h2>Login</h2>
+        <h2 className="mt-5">Login</h2>
         <form onSubmit={handleSubmit}>
           <label>
-            Email:
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input 
+            className="mt-3"
+            type="email" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            placeholder="E-mail"/>
           </label>
           <br />
           <label>
-            Password:
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input 
+            className="my-3"
+            type="password" 
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+            placeholder="Password"
+            />
           </label>
           <br />
-          <button type="submit">Login</button>
+          <CustomButton 
+          label="Log in"
+          onClick={handleSubmit}
+          />
         </form>
       </div>
     );
