@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { updateAvatar }from '../../hooks/useUpdateAvatar';
 import ConfirmationModal from '../confirmation-modal';
+import CustomButton from '../button';
 
 export function AvatarModal() {
   const [show, setShow] = useState(false);
@@ -24,9 +25,10 @@ export function AvatarModal() {
 
   return (
       <div>
-        <Button variant="secondary" onClick={handleShow}>
-            Update Avatar
-        </Button>
+        <CustomButton 
+          onClick={handleShow}
+          label="Update Avatar"
+        />
 
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
