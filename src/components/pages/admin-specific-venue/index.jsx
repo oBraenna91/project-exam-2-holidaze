@@ -5,8 +5,6 @@ import AdminBookingCard from '../../admin-booking-card';
 import AdminVenueDetails from '../../admin-venue-details';
 import AdminCalendar from '../../admin-calendar';
 import removeVenue from '../../../hooks/useDeleteVenue';
-import CustomButton from '../../button';
-import CustomModal from '../../modal';
 import ConfirmationModal from '../../confirmation-modal';
 
 export function AdminSpecificVenue() {
