@@ -31,7 +31,6 @@ export function CreateVenueForm() {
             },
         }
         createVenue(venueData);
-        window.location.reload();
     }
 
     return (
@@ -60,7 +59,7 @@ export function CreateVenueForm() {
             {...register('maxGuests', {
                 required: true,
                 min: 0,
-                max: 9999
+                max: 100
             })}
             />
             <input className="col-6 form-input my-1 m-auto"
