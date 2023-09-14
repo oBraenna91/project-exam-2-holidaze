@@ -5,6 +5,10 @@ import BreakfastIcon from '../icons/breakfast';
 import ParkingIcon from '../icons/parking';
 import PetsIcon from '../icons/pets';
 import WifiIcon from '../icons/wifi';
+import NoWifiIcon from '../icons/no-wifi';
+import NoPetsIcon from '../icons/no-pets';
+import NoParkingIcon from '../icons/no-parking';
+import NoBreakfastIcon from '../icons/no-breakfast';
 
 export function VenueLayout({ venue }) {
     const {name, media, location, description, rating, price, meta, maxGuests} = venue;
@@ -23,25 +27,25 @@ export function VenueLayout({ venue }) {
             <div className="d-flex my-5 flex-column justify-content-center align-items-center">
                 <div className="col-8 my-3 d-flex align-items-center justify-content-between">
                     <div className="col-3">
-                        <WifiIcon />
+                        {meta.wifi ? <WifiIcon /> : <NoWifiIcon />}
                     </div>
                     <p className="my-0">WiFi included: {meta.wifi ? 'Yes' : 'No'}</p>
                 </div>
                 <div className="col-8 my-3 d-flex align-items-center justify-content-between">
                     <div className="col-3">
-                        <PetsIcon />
+                        {meta.pets ? <PetsIcon /> : <NoPetsIcon />}
                     </div>
                     <p className="my-0">Pets allowed: {meta.pets ? 'Yes' : 'No'}</p>
                 </div>
                 <div className="col-8 my-3 d-flex align-items-center justify-content-between">
                     <div className="col-3">
-                        <BreakfastIcon />
+                        {meta.breakfast ? <BreakfastIcon /> : <NoBreakfastIcon />}
                     </div>
                     <p className="my-0">Breakast included: {meta.breakfast ? 'Yes' : 'No'}</p>
                 </div>
                 <div className="col-8 my-3 d-flex align-items-center justify-content-between">
                     <div className="col-3">
-                        <ParkingIcon />
+                        {meta.parking ? <ParkingIcon /> : <NoParkingIcon />}
                     </div>
                     <p className="my-0">Parking included: {meta.parking ? 'Yes' : 'No'}</p>
                 </div>
