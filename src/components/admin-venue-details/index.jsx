@@ -28,7 +28,8 @@ export function AdminVenueDetails({ venue }) {
         try {
             await updateVenue(venueUpdatedData, id);
             setIsUpdating(false);
-            console.log('Venue updated successfully')
+            alert('Venue updated successfully')
+            window.location.reload();
         } catch(error){
             console.log('Failed', error);
             setIsUpdating(false);
@@ -39,7 +40,7 @@ export function AdminVenueDetails({ venue }) {
         <div>
             <Image src={mediaUrl} alt={name} fluid />
             <h2 className="my-3">{name.toUpperCase()}</h2>
-            <p>{description}</p>
+            <p className="col-11 mb-5 m-auto">{description}</p>
             <p>{location.address}, {location.city}</p>
             <p>{location.country}</p>
             <div className="d-flex my-5 flex-column justify-content-center align-items-center">
@@ -74,7 +75,7 @@ export function AdminVenueDetails({ venue }) {
             <div className="my-3">
               <CustomModal
                 title="Update This Venue"
-                buttonTitle="update Venue"
+                buttonTitle="Update venue"
                 body={<UpdateVenueForm initialValues={venue} onSubmit={onSubmit} />}
               />
             </div>

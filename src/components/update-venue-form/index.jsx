@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import CustomButton from '../button';
 
 export function UpdateVenueForm({ initialValues, onSubmit }) {
     const { register, handleSubmit } = useForm({defaultValues: initialValues});
@@ -115,7 +116,11 @@ export function UpdateVenueForm({ initialValues, onSubmit }) {
                 maxLength: 500
             })}
             />
-            <input className="bg-secondary rounded-pill col-4 m-auto my-3 form-button" type="submit" />
+            <CustomButton
+            label="Update"
+            className="col-7 m-auto mt-3"
+            onClick={handleSubmit(onSubmit)}
+            />
         </form>
     )
 }

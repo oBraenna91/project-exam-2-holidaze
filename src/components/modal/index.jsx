@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+import CustomButton from '../button';
 import Modal from 'react-bootstrap/Modal';
 
 export function CustomModal({ buttonTitle, title, body }) {
@@ -11,9 +11,10 @@ export function CustomModal({ buttonTitle, title, body }) {
 
   return (
     <div>
-    <Button variant="secondary" onClick={handleShow}>
-      {buttonTitle}
-    </Button>
+    <CustomButton 
+    onClick={handleShow}
+      label={buttonTitle}
+    />
 
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>

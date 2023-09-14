@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CustomButton from '../button';
 
@@ -12,9 +11,10 @@ export function ConfirmationModal({ buttonTitle, title, body, onClick, confirmat
 
   return (
     <div className="m-auto mt-4">
-    <Button variant="secondary" onClick={handleShow}>
-      {buttonTitle}
-    </Button>
+    <CustomButton 
+    onClick={handleShow}
+      label={buttonTitle}
+    />
 
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
