@@ -24,9 +24,13 @@ export function AdminPage() {
               <h1 className="my-3">Admin</h1>
               <CreateVenueModal />
               <h2 className="my-3">Your Venues</h2>
-              {yourAdminVenues.map((venue) => (
-                <AdminCard venue={venue} key={venue.id}/>
-              ))}
+              <div className="row d-flex mx-0 flex-wrap justify-content-center">
+                {yourAdminVenues.map((venue) => (
+                  <div key={venue.id} className="col-md-5 col-lg-3 col-9 mx-2 mb-4">
+                    <AdminCard venue={venue} />
+                  </div>
+                ))}
+              </div>
           </div>
       );
     }
