@@ -15,38 +15,87 @@ export function VenueDetails({ venue }) {
         setSelectedBookingDates(dates);
     };
 
-    const handleNumGuestsChange = (e) => {
-        setNumGuests(parseInt(e.target.value));
-      };
+    const isLoggedIn = !!localStorage.getItem('token') || false;
 
     const maxGuests = venue.maxGuests ;
 
     const dropdownOptions = Array.from({length: maxGuests}, (_, index) => index + 1);
 
-    const handleBookingRequest = async () => {
-        const [startDate, endDate] = selectedBookingDates;
+    const handleNumGuestsChange = (e) => {
+        setNumGuests(parseInt(e.target.value));
+      };
 
+      const handleBookingRequest = async () => {
+        if (!isLoggedIn) {
+            // User is not logged in, show alert and redirect to /login
+            alert('You are not logged in');
+            window.location.href = '/login';
+            return; // Prevent further execution of booking request
+        }
+    
+        // User is logged in, proceed with the booking request
+        const [startDate, endDate] = selectedBookingDates;
+    
         const bookingRequest = {
             dateFrom: startDate.toISOString(),
             dateTo: endDate.toISOString(),
             guests: numGuests,
             venueId: venue.id,
         };
+    
         try {
             console.log(bookingRequest);
-            const response = await authFetch(BOOKINGS_URL, { 
+            const response = await authFetch(BOOKINGS_URL, {
                 method: 'POST',
-                body: JSON.stringify(bookingRequest)
+                body: JSON.stringify(bookingRequest),
             });
             const result = await response.json();
             console.log(result);
-            if(response.ok){
-                alert('Booking created!')
+            if (response.ok) {
+                alert('Booking created!');
+                window.location.reload();
             }
-        }catch(error){
+        } catch (error) {
             console.log('Error', error);
         }
     };
+
+    //   const handleBookClick = () => {
+    //     if (!isLoggedIn) {
+    //         // User is not logged in, show alert and redirect to /login
+    //         alert('You are not logged in');
+    //         window.location.href= '/login';
+    //     }else{
+            
+    //     }
+    //   }
+
+    
+
+    // const handleBookingRequest = async () => {
+    //     const [startDate, endDate] = selectedBookingDates;
+
+    //     const bookingRequest = {
+    //         dateFrom: startDate.toISOString(),
+    //         dateTo: endDate.toISOString(),
+    //         guests: numGuests,
+    //         venueId: venue.id,
+    //     };
+    //     try {
+    //         console.log(bookingRequest);
+    //         const response = await authFetch(BOOKINGS_URL, { 
+    //             method: 'POST',
+    //             body: JSON.stringify(bookingRequest)
+    //         });
+    //         const result = await response.json();
+    //         console.log(result);
+    //         if(response.ok){
+    //             alert('Booking created!')
+    //         }
+    //     }catch(error){
+    //         console.log('Error', error);
+    //     }
+    // };
 
     return(
         <div>

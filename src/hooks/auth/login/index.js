@@ -20,6 +20,7 @@ export const loginUser = async (userData) => {
         setLocalStorageItem('token', accessToken);
         setLocalStorageItem('user', user);
         alert('Successfully logged in!')
+        window.location.href='/profile';
     } else {
       console.error('Login failed:', result);
     }

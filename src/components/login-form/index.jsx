@@ -13,7 +13,6 @@ export function LoginForm() {
       try {
         const loginData = extractLoginData(email, password);
         await loginUser(loginData) 
-        window.location.href='/profile';
       } catch (error) {
         console.error('Error logging in:', error);
       }
