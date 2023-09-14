@@ -13728,6 +13728,14 @@ fieldset:disabled .btn {
   padding: 0;
 }
 
+.nav-container {
+  width: 100%;
+}
+
+.container {
+  max-width: 100%;
+}
+
 .navbar-toggler {
   border: none;
 }
@@ -13761,6 +13769,13 @@ fieldset:disabled .btn {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.admin-card-image {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .custom-button {
