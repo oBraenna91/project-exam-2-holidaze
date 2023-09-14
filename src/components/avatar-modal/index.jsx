@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { updateAvatar }from '../../hooks/useUpdateAvatar';
+import ConfirmationModal from '../confirmation-modal';
 
 export function AvatarModal() {
   const [show, setShow] = useState(false);
@@ -12,11 +13,11 @@ export function AvatarModal() {
 
   const handleUpdateAvatar = async () => {
     try {
-      await updateAvatar(avatarURL); // Replace 'yourUserName' with the actual user name
+      await updateAvatar(avatarURL); 
       handleClose();
       alert('Avatar updated!')
+      window.location.reload();
     } catch (error) {
-      // Handle error (e.g., show an error message)
       console.error('Failed to update avatar', error);
     }
   };
@@ -33,17 +34,26 @@ export function AvatarModal() {
             </Modal.Header>
             <Modal.Body>
                 <input 
-                value={avatarURL} placeholder="Enter Avatar URL"
+                value={avatarURL} 
+                placeholder="Enter Avatar URL"
                 onChange={(e) => setAvatarURL(e.target.value)}
+                className="form-input"
                 />
             </Modal.Body>
             <Modal.Footer>
             <Button variant="danger" onClick={handleClose}>
                 Close
             </Button>
-            <Button variant="secondary" onClick={handleUpdateAvatar}>
+            {/* <Button variant="secondary" onClick={handleUpdateAvatar}>
                 UPDATE
-            </Button>
+            </Button> */}
+            <ConfirmationModal
+            buttonTitle="Update avatar"
+            title="Are you sure?"
+            body="Are you sure you want to update your avatar?"
+            onClick={handleUpdateAvatar}
+            confirmation="Update"
+            />
             </Modal.Footer>
         </Modal>
       </div>
