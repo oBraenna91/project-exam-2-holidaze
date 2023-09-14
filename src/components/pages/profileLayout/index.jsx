@@ -28,7 +28,7 @@ export function ProfileLayout({ profile }) {
         <div>
             <h1 className="my-5">Profile</h1>
             <div className="d-flex flex-column justify-content-center align-items-center">
-                <div className="col-4 mb-3">
+                <div className="col-4 col-md-3 mb-3">
                     <Image src={avatarUrl} alt={name} fluid />
                 </div>
                 <div className="mb-3">
