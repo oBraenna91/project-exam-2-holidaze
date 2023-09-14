@@ -41,9 +41,13 @@ export function ProfileLayout({ profile }) {
             </div>
             <div>
                 <h2 className="my-5">Your upcoming bookings</h2>
+                <div className="row d-flex mx-0 flex-wrap justify-content-center">
                 {upcomingBookings.map((booking) => (
-                    <BookingCard key={booking.id} booking={booking} />
+                    <div key={booking.id} className="col-md-5 col-lg-3 col-9 mx-2 mb-4">
+                        <BookingCard booking={booking} />
+                    </div>
                 ))}
+                </div>
             </div>
         </div>
     )
