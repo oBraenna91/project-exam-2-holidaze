@@ -10,12 +10,13 @@ import NoWifiIcon from '../icons/no-wifi';
 import NoPetsIcon from '../icons/no-pets';
 import NoBreakfastIcon from '../icons/no-breakfast';
 import NoParkingIcon from '../icons/no-parking';
+import BlueLocationIcon from '../icons/location';
 
 export function BookingCard({ booking }) {
 
     const { 
         guests, dateFrom, dateTo, 
-        venue: {name, meta, media,},
+        venue: {name, meta, media, location}
         } = booking;
     
     function formatDate(dateString) {
@@ -68,6 +69,10 @@ export function BookingCard({ booking }) {
       <Card.Img className="card-image" variant="top" src={media} alt={name}/>
       <Card.Body>
         <Card.Title className="my-3 h2">{name.toUpperCase()}</Card.Title>
+          <div className="mb-4 d-flex m-auto justify-content-center align-items-center">
+            <div className="col-1 me-2"><BlueLocationIcon /></div>
+            {location.city}, {location.country}
+          </div>
           <div>Check-in: {formatDate(dateFrom)}</div>
           <div>Check-out: {formatDate(dateTo)}</div>
           <div>Guests: {guests}</div>
