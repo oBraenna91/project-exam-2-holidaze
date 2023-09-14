@@ -1,7 +1,6 @@
 import React from 'react';
 import createVenue from '../../hooks/useCreateVenue';
 import { useForm } from 'react-hook-form';
-import ConfirmationModal from '../confirmation-modal';
 import CustomButton from '../button';
 
 export function CreateVenueForm() {
