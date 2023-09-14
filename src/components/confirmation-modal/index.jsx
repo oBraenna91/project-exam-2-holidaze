@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import CustomButton from '../button';
 
-export function ConfirmationModal({ buttonTitle, title, body, onClick, confirmation }) {
+export function ConfirmationModal({ buttonTitle, buttonClass, title, body, onClick, confirmation }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -11,9 +11,10 @@ export function ConfirmationModal({ buttonTitle, title, body, onClick, confirmat
 
   return (
     <div className="m-auto mt-4">
-    <CustomButton 
-    onClick={handleShow}
-      label={buttonTitle}
+    <CustomButton
+        className={buttonClass}
+        onClick={handleShow}
+        label={buttonTitle}
     />
 
     <Modal show={show} onHide={handleClose}>
@@ -23,7 +24,7 @@ export function ConfirmationModal({ buttonTitle, title, body, onClick, confirmat
       <Modal.Body className="d-flex flex-column">
           {body}
           <CustomButton 
-          className="mt-4 custom-modal-confirmation-button"
+          className={`mt-4 custom-modal-confirmation-button ${buttonClass}`}
           onClick={onClick}
           label={confirmation}
           />

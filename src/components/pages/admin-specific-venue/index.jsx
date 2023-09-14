@@ -6,6 +6,8 @@ import AdminVenueDetails from '../../admin-venue-details';
 import AdminCalendar from '../../admin-calendar';
 import removeVenue from '../../../hooks/useDeleteVenue';
 import CustomButton from '../../button';
+import CustomModal from '../../modal';
+import ConfirmationModal from '../../confirmation-modal';
 
 export function AdminSpecificVenue() {
 
@@ -46,7 +48,14 @@ export function AdminSpecificVenue() {
             </div>
             <AdminCalendar bookings={bookings}/>
             <div>
-                <CustomButton label="Delete venue" className="bg-danger" onClick={handleDeleteVenue} />
+              <ConfirmationModal 
+              buttonTitle="Delete venue"
+              buttonClass="bg-danger"
+              title="Delete this venue" 
+              body="Are you sure you want to delete this venue?" 
+              onClick={handleDeleteVenue} 
+              confirmation="Yes, delete venue"
+              />
             </div>
           </div>
           
