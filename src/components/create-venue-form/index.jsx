@@ -71,7 +71,7 @@ export function CreateVenueForm() {
                 max: 9999
             })}
             />
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column align-items-center justify-content-center">
                 <p className="m-auto">Wifi</p>
                 <input className="col-6 my-1 m-auto"
                 type="checkbox"
