@@ -19,7 +19,7 @@ export function AdminCard({ venue }) {
     return (
         <div>
             <Card className="my-3 m-auto shadow-lg venue-card" style={{ width: '18rem' }}>
-                <Card.Img className="admin-card-image" variant="top" src={mediaUrl} alt={name}/>
+                <Card.Img className="card-image" variant="top" src={mediaUrl} alt={name}/>
                 <Card.Body>
                     <Card.Title className="my-3 h2">{name.toUpperCase()}</Card.Title>
                     <p>{location.address}, {location.city}</p>
