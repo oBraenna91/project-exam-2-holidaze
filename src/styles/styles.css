@@ -13901,4 +13901,19 @@ h2, .h2 {
 .mini-location {
   margin-bottom: 0;
 }
+
+/* FORMS */
+.form-input {
+  border-radius: 16px;
+  padding: 10px 20px;
+  border: 1px solid #1D369D;
+}
+
+.custom-modal-confirmation-button {
+  margin: auto;
+}
+
+.custom-modal-confirmation-button:hover {
+  text-decoration: underline;
+}
 /*# sourceMappingURL=styles.css.map */
