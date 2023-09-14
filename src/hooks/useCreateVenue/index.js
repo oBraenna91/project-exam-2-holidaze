@@ -2,11 +2,9 @@ import { VENUES_URL } from '../../constants';
 //import retrieveName from '../../helpers/retriever';
 import { authFetch } from '../auth/authFetch';
 
-export async function createVenue(venueData) {
-    
-//   const name = retrieveName();  
+export async function createVenue(venueData) {     
+
   const url = `${VENUES_URL}`;
-//   const [specificProfile, setSpecificProfile] = useState(null);
 
   try {
       const response = await authFetch(url, {
@@ -18,9 +16,10 @@ export async function createVenue(venueData) {
       }
       const json = await response.json();
       console.log(json);
+      alert('Venue created!')
       return json;
   } catch(error) {
-      throw new Error('Failed to update avatar'); 
+      throw new Error('Failed to create venue'); 
     }
 }
 

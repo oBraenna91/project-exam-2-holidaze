@@ -1,6 +1,8 @@
 import React from 'react';
 import createVenue from '../../hooks/useCreateVenue';
 import { useForm } from 'react-hook-form';
+import ConfirmationModal from '../confirmation-modal';
+import CustomButton from '../button';
 
 export function CreateVenueForm() {
     const { register, handleSubmit } = useForm();
@@ -30,12 +32,13 @@ export function CreateVenueForm() {
             },
         }
         createVenue(venueData);
+        window.location.reload();
     }
 
     return (
         <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
             <h2 className="m-auto">Venue info</h2>
-            <input className="col-6 my-1 m-auto"
+            <input className="col-6 form-input my-1 m-auto"
             placeholder="Name"
             {...register('name',{
                 required: true,
@@ -43,15 +46,16 @@ export function CreateVenueForm() {
                 maxLength: 30
             })}
             />
-            <input className="col-6 my-1 m-auto"
+            <textarea className="col-6 form-input my-1 m-auto"
             placeholder="Description"
             {...register('description',{
                 required: true,
                 minLength: 3,
                 maxLength: 400
             })}
+            rows={7}
             />
-            <input className="col-6 my-1 m-auto"
+            <input className="col-6 form-input my-1 m-auto"
             placeholder="Max number of Guests"
             type="number"
             {...register('maxGuests', {
@@ -60,7 +64,7 @@ export function CreateVenueForm() {
                 max: 9999
             })}
             />
-            <input className="col-6 my-1 m-auto"
+            <input className="col-6 form-input my-1 m-auto"
             placeholder="Price pr night"
             type="number"
             {...register('price', {
@@ -97,51 +101,55 @@ export function CreateVenueForm() {
                 {...register('pets')}
                 />
             </div>
-            <h2 className="m-auto">Location info</h2>
-            <input className="col-6 my-1 m-auto"
+            <h2 className="m-auto my-3">Location info</h2>
+            <input className="col-6 form-input my-1 m-auto"
             placeholder="Address"
             {...register('address',{
                 minLength: 3,
                 maxLength: 90
             })}
             />
-            <input className="col-6 my-1 m-auto"
+            <input className="col-6 form-input my-1 m-auto"
             placeholder="City"
             {...register('city',{
                 minLength: 3,
                 maxLength: 30
             })}
             />
-            <input className="col-6 my-1 m-auto"
+            <input className="col-6 form-input my-1 m-auto"
             placeholder="Zip Code"
             {...register('zip',{
                 minLength: 2,
                 maxLength: 15
             })}
             />
-            <input className="col-6 my-1 m-auto"
+            <input className="col-6 form-input my-1 m-auto"
             placeholder="Country"
             {...register('country',{
                 minLength: 3,
                 maxLength: 30
             })}
             />
-            <input className="col-6 my-1 m-auto"
+            <input className="col-6 my-1 form-input m-auto"
             placeholder="Continent"
             {...register('continent',{
                 minLength: 3,
                 maxLength: 30
             })}
             />
-            <h2 className="m-auto mb-3">Media</h2>
-            <input className="col-6 my-1 m-auto"
+            <h2 className="m-auto  my-3">Media</h2>
+            <input className="col-6 form-input my-1 m-auto"
             placeholder="Media URL"
             {...register('media',{
                 minLength: 3,
                 maxLength: 500
             })}
             />
-            <input className="bg-secondary rounded-pill col-4 m-auto mt-3 form-button" type="submit" />
+            <CustomButton 
+            className="mt-3 col-7 m-auto" 
+            label="Create venue" 
+            onClick={handleSubmit(onSubmit)}
+            />
         </form>
     )
 }

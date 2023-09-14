@@ -11,7 +11,7 @@ export function ConfirmationModal({ buttonTitle, title, body, onClick, confirmat
 
 
   return (
-    <div>
+    <div className="m-auto mt-4">
     <Button variant="secondary" onClick={handleShow}>
       {buttonTitle}
     </Button>
