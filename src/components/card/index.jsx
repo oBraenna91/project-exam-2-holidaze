@@ -8,11 +8,17 @@ import BlueLocationIcon from '../icons/location';
 
 
 export function VenueCard({ venue }) {
+
+  // style={{ width: '18rem' }}
+
   const {name, media, id, meta, location} = venue;
   const mediaUrl = media.length > 0 ? media[0] : logoImage;
+
   return (
-    <Card className="my-3 shadow-lg venue-card" style={{ width: '18rem' }}>
-      <Card.Img className="card-image" variant="top" src={mediaUrl} alt={name}/>
+    <Card className="my-3 shadow-lg venue-card">
+      <div className="card-image-container">
+        <Card.Img className="card-image-top" variant="top" src={mediaUrl} alt={name}/>
+      </div>
       <Card.Body>
         <Card.Title className="my-3 h2">{name.toUpperCase()}</Card.Title>
         <div className="mini-location-container mb-4 d-flex m-auto justify-content-center">

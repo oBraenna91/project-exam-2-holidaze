@@ -21,13 +21,24 @@ export function Home() {
     }
     return (
         <div className="d-flex flex-column align-items-center my-3">
-            <SearchBar venues={venues}/>
+            <SearchBar venues={venues} />
             <h1 className="mb-5">WELCOME TO HOLIDAZE</h1>
-            {venues.map((venue) => (
-                <VenueCard key={venue.id} venue={venue} />
-            ))}
-            
+            <div className="row d-flex mx-0 flex-wrap justify-content-center">
+                {venues.map((venue) => (
+                <div key={venue.id} className="col-md-5 col-lg-3 col-9 mx-2 mb-4">
+                    <VenueCard venue={venue} />
+                </div>
+                ))}
+            </div>
         </div>
+        // <div className="d-flex flex-column align-items-center my-3">
+        //     <SearchBar venues={venues}/>
+        //     <h1 className="mb-5">WELCOME TO HOLIDAZE</h1>
+        //     {venues.map((venue) => (
+        //         <VenueCard key={venue.id} venue={venue} />
+        //     ))}
+            
+        // </div>
     );
 }
 
