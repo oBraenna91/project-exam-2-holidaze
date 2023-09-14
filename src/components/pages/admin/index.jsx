@@ -32,21 +32,3 @@ export function AdminPage() {
     }
     
 export default AdminPage;
-
-// export function AdminLayout({ profile }) {
-
-//         const name = retrieveName();
-//         const { specificProfile, isLoading, isError } = useSpecificProfile(name);
-    
-//         if (isLoading || !specificProfile) {
-//             return <div className="text-secondary text-center">Loading...</div>;
-//           }
-        
-//           if (isError) {
-//             return <div className="text-secondary text-center">Error</div>;
-//           }
-//           return (
-//         <div>
-//             <h1>Admin</h1>
-//             <TestCreateVenueModal />
-//             <AdminLayout profile={specificProfile} />
