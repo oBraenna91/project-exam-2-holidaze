@@ -16,7 +16,8 @@ export function AdminSpecificVenue() {
         try {
           // Call the removeVenue function with the venue id
           await removeVenue(id);
-          // Redirect or handle success as needed
+          alert('Venue deleted')
+          window.location.href= '/admin';
         } catch (error) {
           console.error('Failed to delete venue:', error);
           // Handle error
