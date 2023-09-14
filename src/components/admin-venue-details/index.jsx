@@ -48,25 +48,25 @@ export function AdminVenueDetails({ venue }) {
             <p>{location.address}, {location.city}</p>
             <p>{location.country}</p>
             <div className="d-flex my-5 flex-column justify-content-center align-items-center">
-                <div className="col-8 my-3 d-flex align-items-center justify-content-between">
+                <div className="col-8 col-md-3 my-3 d-flex align-items-center justify-content-between">
                     <div className="col-3">
                         {meta.wifi ? <WifiIcon /> : <NoWifiIcon />}
                     </div>
                     <p className="my-0">WiFi included: {meta.wifi ? 'Yes' : 'No'}</p>
                 </div>
-                <div className="col-8 my-3 d-flex align-items-center justify-content-between">
+                <div className="col-8 col-md-3 my-3 d-flex align-items-center justify-content-between">
                     <div className="col-3">
                         {meta.pets ? <PetsIcon /> : <NoPetsIcon />}
                     </div>
                     <p className="my-0">Pets allowed: {meta.pets ? 'Yes' : 'No'}</p>
                 </div>
-                <div className="col-8 my-3 d-flex align-items-center justify-content-between">
+                <div className="col-8 col-md-3 my-3 d-flex align-items-center justify-content-between">
                     <div className="col-3">
                         {meta.breakfast ? <BreakfastIcon /> : <NoBreakfastIcon /> }
                     </div>
                     <p className="my-0">Breakast included: {meta.breakfast ? 'Yes' : 'No'}</p>
                 </div>
-                <div className="col-8 my-3 d-flex align-items-center justify-content-between">
+                <div className="col-8 col-md-3 my-3 d-flex align-items-center justify-content-between">
                     <div className="col-3">
                         {meta.parking ? <ParkingIcon /> : <NoParkingIcon />}
                     </div>
