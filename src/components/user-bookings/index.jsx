@@ -65,8 +65,10 @@ export function BookingCard({ booking }) {
 
     // const mediaUrl = venue.media.length > 0 ? venue.media[0] : logoImage;
   return (
-    <Card className="my-3 shadow-lg venue-card m-auto" style={{ width: '18rem' }}>
-      <Card.Img className="card-image" variant="top" src={media} alt={name}/>
+    <Card className="my-3 shadow-lg venue-card m-auto">
+      <div className="card-image-container">
+        <Card.Img className="card-image-top" variant="top" src={media} alt={name}/>
+      </div>
       <Card.Body>
         <Card.Title className="my-3 h2">{name.toUpperCase()}</Card.Title>
           <div className="mb-4 d-flex m-auto justify-content-center align-items-center">
