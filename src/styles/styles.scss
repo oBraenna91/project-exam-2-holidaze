@@ -172,3 +172,19 @@ h2 {
 .mini-location {
     margin-bottom: 0;
 }
+
+/* FORMS */
+
+.form-input {
+    border-radius: 16px;
+    padding: 10px 20px;
+    border: 1px solid $primary;
+}
+
+.custom-modal-confirmation-button {
+    margin: auto;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
