@@ -20,12 +20,11 @@ export const loginUser = async (userData) => {
         setLocalStorageItem('token', accessToken);
         setLocalStorageItem('user', user);
         alert('Successfully logged in!')
-
     } else {
-      console.error('Registration failed:', result); // Log the error response
+      console.error('Login failed:', result);
     }
   } catch (error) {
-    console.error('Error registering user:', error);
+    console.error('Error loggin in user:', error);
   }
 };
 
