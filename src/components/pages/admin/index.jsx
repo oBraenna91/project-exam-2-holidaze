@@ -1,6 +1,6 @@
 import React from 'react';
 import useSpecificProfile from '../../../hooks/useSpecificProfile';
-import TestCreateVenueModal from '../../createVenueModal';
+import CreateVenueModal from '../../createVenueModal';
 import retrieveName from '../../../helpers/retriever';
 import AdminCard from '../../admin-card';
 
@@ -22,7 +22,7 @@ export function AdminPage() {
       return (
           <div>
               <h1 className="my-3">Admin</h1>
-              <TestCreateVenueModal />
+              <CreateVenueModal />
               <h2 className="my-3">Your Venues</h2>
               {yourAdminVenues.map((venue) => (
                 <AdminCard venue={venue} key={venue.id}/>
