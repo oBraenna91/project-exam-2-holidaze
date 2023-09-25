@@ -13,8 +13,6 @@ export function AdminCard({ venue }) {
     // const mediaUrl = media.length > 0 ? media[0] : logoImage;
     const mediaUrl = media.length > 0 ? media[0] : logoImage;
 
-    console.log(venue);
-
 
     return (
         <div>

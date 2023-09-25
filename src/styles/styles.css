@@ -13745,15 +13745,16 @@ fieldset:disabled .btn {
 }
 
 .venue-card {
-  border: none;
-  border-radius: 20px;
   height: 440px;
 }
 
 .booking-card {
+  min-height: 480px;
+}
+
+.venue-card, .booking-card, .admin-booking-card, .admin-card {
   border: none;
   border-radius: 20px;
-  min-height: 480px;
 }
 
 .card-image-container {
