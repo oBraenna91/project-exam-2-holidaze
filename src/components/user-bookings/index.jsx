@@ -65,7 +65,7 @@ export function BookingCard({ booking }) {
 
     // const mediaUrl = venue.media.length > 0 ? venue.media[0] : logoImage;
   return (
-    <Card className="my-3 shadow-lg venue-card m-auto">
+    <Card className="my-3 shadow-lg booking-card m-auto">
       <div className="card-image-container">
         <Card.Img className="card-image-top" variant="top" src={media} alt={name}/>
       </div>
