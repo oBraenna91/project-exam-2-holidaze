@@ -8,7 +8,7 @@ export function SearchBar(props) {
 
   return (
     <div className="search-container">
-        <Form className="d-flex flex-column">
+        <Form className="d-flex flex-column" id="searchForm">
             <input 
             className="search-bar m-auto rounded-pill mb-5 input-button px-4 py-1 col-12"
             value={searchValue}
