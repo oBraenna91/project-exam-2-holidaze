@@ -29,13 +29,13 @@ function Header() {
     }
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary mx-0">
-      <Container className="bg-primary nav-container d-flex py-1 px-0 mx-0">
+    <Navbar expand="md" className="bg-body-tertiary mx-0">
+      <Container className="bg-primary nav-container py-1 px-0 mx-0">
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-dark" />
-        <Navbar.Brand className="col-6 mx-0" href="/">
+        <Navbar.Brand className="col-6 col-md-3 mx-0" href="/">
             <Logo />
         </Navbar.Brand>
-        <Navbar.Brand className="col-1">
+        <Navbar.Brand className="col-1 d-md-none">
             <Link to={`/profile`} onClick={handleProfileClick}>
                 <UserIcon />
             </Link>

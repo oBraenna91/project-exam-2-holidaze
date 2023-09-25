@@ -13946,4 +13946,14 @@ h2, .h2 {
 .custom-modal-confirmation-button:hover {
   text-decoration: underline;
 }
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .collapse {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin-right: 2em;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

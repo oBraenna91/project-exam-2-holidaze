@@ -216,3 +216,12 @@ h2 {
         text-decoration: underline;
     }
 }
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+    .collapse {
+      max-width: max-content;
+      margin-right: 2em;
+    }
+  }
