@@ -17,7 +17,8 @@ export const registerUser = async (userData) => {
     if (response.ok) {
       alert('Profile registered');
     } else {
-      console.error('Registration failed:', result); // Log the error response
+      alert(`Registration failed: ${result.errors[0].message}`);
+      window.location.reload();
     }
   } catch (error) {
     console.error('Error registering user:', error);

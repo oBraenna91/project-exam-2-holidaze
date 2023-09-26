@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { registerUser } from '../../../hooks/auth/register';
 import { extractUserData } from '../../../helpers/register';
+import CustomButton from '../../button';
 
 
 export function RegistrationForm() {
@@ -18,35 +19,37 @@ export function RegistrationForm() {
       await registerUser(userData);
       
     } catch (error) {
-      console.error('Error registering user:', error);
+      //console.error(error);
+      console.log(error)
     }
   };
 
   return (
     <div>
-      <h2>Register</h2>
+      <h2 className="mt-5">Register</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Name:
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+          <input className="my-3 form-input" placeholder="Name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
         </label>
         <br />
         <label>
-          Email:
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input className="my-3 form-input" placeholder="E-Mail" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </label>
         <br />
         <label>
-          Password:
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input className="my-3 form-input" placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
         <br />
         <label>
           Admin:
-          <input type="checkbox" checked={venueManager} onChange={(e) => setVenueManager(e.target.checked)} />
+          <input className="form-input" type="checkbox" checked={venueManager} onChange={(e) => setVenueManager(e.target.checked)} />
         </label>
         <br />
-        <button type="submit">Register</button>
+        <CustomButton 
+          label="Register"
+          onClick={handleSubmit}
+          className="my-4"
+          />
       </form>
     </div>
   );

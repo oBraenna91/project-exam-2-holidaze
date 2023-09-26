@@ -22,7 +22,8 @@ export const loginUser = async (userData) => {
         alert('Successfully logged in!')
         window.location.href='/profile';
     } else {
-      console.error('Login failed:', result);
+      alert(`Login failed: ${result.errors[0].message}`);
+      window.location.reload();
     }
   } catch (error) {
     console.error('Error loggin in user:', error);
