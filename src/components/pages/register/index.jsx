@@ -15,12 +15,10 @@ export function RegistrationForm() {
 
     try {
       const userData = extractUserData(name, email, password, venueManager);
-      console.log(userData);
       await registerUser(userData);
       
     } catch (error) {
-      //console.error(error);
-      console.log(error)
+      console.error(error);
     }
   };
 
