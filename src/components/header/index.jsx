@@ -12,7 +12,8 @@ function Header() {
     const handleLogout = () => {
         removeLocalStorageItem('token');
         removeLocalStorageItem('user');
-        window.location.href = '/logout';
+        alert('You are now logged out!')
+        window.location.href = '/';
     }
 
 
@@ -43,7 +44,7 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/" className="text-white">Venues</Nav.Link>
-            <Nav.Link href="/profile" className="text-white">Profile</Nav.Link>
+            <Nav.Link to={`/profile`} onClick={handleProfileClick} className="text-white">Profile</Nav.Link>
             {isVenueManager && (
                 <Nav.Link href="/admin" className="text-white">
                     Admin
