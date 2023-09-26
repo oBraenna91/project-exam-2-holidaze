@@ -10,15 +10,15 @@ export function CreateVenueForm() {
         const venueData = {
             name: data.name,
             description: data.description,
-            media: data.media ? [data.media] : [], // Convert media to an array
-            price: parseFloat(data.price), // Parse price as a float
-            maxGuests: parseInt(data.maxGuests), // Parse maxGuests as an integer
-            rating: 0, // Default rating value
+            media: data.media ? [data.media] : [],
+            price: parseFloat(data.price), 
+            maxGuests: parseInt(data.maxGuests),
+            rating: 0,
             meta: {
-              wifi: !!data.wifi, // Convert wifi to boolean
-              parking: !!data.parking, // Convert parking to boolean
-              breakfast: !!data.breakfast, // Convert breakfast to boolean
-              pets: !!data.pets, // Convert pets to boolean
+              wifi: !!data.wifi, 
+              parking: !!data.parking, 
+              breakfast: !!data.breakfast, 
+              pets: !!data.pets,
             },
             location: {
               address: data.address || 'Unknown',
@@ -26,8 +26,8 @@ export function CreateVenueForm() {
               zip: data.zip || 'Unknown',
               country: data.country || 'Unknown',
               continent: data.continent || 'Unknown',
-              lat: 0, // Default lat value
-              lng: 0, // Default lng value
+              lat: 0,
+              lng: 0, 
             },
         }
         createVenue(venueData);
