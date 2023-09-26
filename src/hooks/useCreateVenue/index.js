@@ -15,9 +15,9 @@ export async function createVenue(venueData) {
           throw new Error('Failed to create venue')
       }
       const json = await response.json();
-      console.log(json);
       alert('Venue created!')
       window.location.reload();
+      return json;
   } catch(error) {
       console.error('Failed to create venue', error);
       alert('Failed to create venue: ' +error.message); 
