@@ -22,6 +22,7 @@ function Header() {
     const isVenueManager = userInfo?.venueManager || false;
 
     const handleProfileClick = () => {
+      
       if (!isLoggedIn) {
           // User is not logged in, show alert and redirect to /login
           alert('You are not logged in');
@@ -44,7 +45,7 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/" className="text-white">Venues</Nav.Link>
-            <Nav.Link to={`/profile`} onClick={handleProfileClick} className="text-white">Profile</Nav.Link>
+            <Link to={`/profile`} onClick={handleProfileClick} className="text-white nav-link">Profile</Link>
             {isVenueManager && (
                 <Nav.Link href="/admin" className="text-white">
                     Admin
