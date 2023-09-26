@@ -16,6 +16,7 @@ export const registerUser = async (userData) => {
     console.log(result);
     if (response.ok) {
       alert('Profile registered');
+      window.location.href='/profile';
     } else {
       alert(`Registration failed: ${result.errors[0].message}`);
       window.location.reload();
