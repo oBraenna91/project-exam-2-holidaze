@@ -14,6 +14,12 @@ export function RegistrationForm() {
     e.preventDefault();
 
     try {
+
+      if (!email.endsWith('@stud.noroff.no')) {
+        alert('Email must end with "@stud.noroff.no"');
+        return;
+      }
+
       const userData = extractUserData(name, email, password, venueManager);
       await registerUser(userData);
       
