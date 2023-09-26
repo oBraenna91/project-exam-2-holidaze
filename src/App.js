@@ -8,10 +8,10 @@ import useApi from './hooks/useApi';
 import Home from './components/pages/home';
 import SpecificVenue from './components/pages/venue';
 import RegistrationForm from './components/pages/register';
-import LoginForm from './components/login-form';
 import ProfilePage from './components/pages/profile';
 import AdminLayout from './components/pages/admin';
 import AdminSpecificVenue from './components/pages/admin-specific-venue';
+import LoginPage from './components/pages/login';
 
 function App() {
 
@@ -24,7 +24,7 @@ function App() {
           <Route index element={<Home />}/>
           <Route path="venue/:id" element={<SpecificVenue />} />
           <Route path="register" element={<RegistrationForm />} />
-          <Route path="login" element={<LoginForm />} />
+          <Route path="login" element={<LoginPage />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="admin" element={<AdminLayout />} />
           <Route path="admin/venue/:id" element={<AdminSpecificVenue />} />
