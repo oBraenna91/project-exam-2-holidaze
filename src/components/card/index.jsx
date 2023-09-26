@@ -17,7 +17,9 @@ export function VenueCard({ venue }) {
   return (
     <Card className="my-3 shadow-lg venue-card">
       <div className="card-image-container">
-        <Card.Img className="card-image-top" variant="top" src={mediaUrl} alt={name}/>
+        <Link to={`venue/${id}`}>
+          <Card.Img className="card-image-top" variant="top" src={mediaUrl} alt={name}/>
+        </Link>
       </div>
       <Card.Body>
         <Card.Title className="my-3 h2">{name.toUpperCase()}</Card.Title>
