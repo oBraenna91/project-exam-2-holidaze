@@ -38,7 +38,7 @@ export function AvatarModal() {
                 value={avatarURL} 
                 placeholder="Enter Avatar URL"
                 onChange={(e) => setAvatarURL(e.target.value)}
-                className="form-input"
+                className="form-input d-flex m-auto"
                 />
             </Modal.Body>
             <Modal.Footer>
