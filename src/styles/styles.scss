@@ -83,11 +83,18 @@ background-image: url( "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/200
 .checkbox {
     width:25px;
     height:25px;
-    border-radius: 100%;
 
     &:hover{
         cursor: pointer;
     }
+}
+
+.guests-selector {
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    border-color: $primary;
+    padding-left: 3px;
 }
 
 
@@ -103,6 +110,10 @@ h2 {
     font-weight: 600;
 }
 
+p {
+    color: $primary;
+}
+
 .nav-link {
     font-size: large;
 
@@ -111,7 +122,7 @@ h2 {
     }
 }
 
-.underline-text {
+.underline-text, .total-amount {
     text-decoration: underline;
 }
 
