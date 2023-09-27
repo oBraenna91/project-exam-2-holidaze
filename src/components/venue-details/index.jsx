@@ -98,7 +98,7 @@ export function VenueDetails({ venue }) {
     // };
 
     return(
-        <div>
+        <div className="col-lg-6 col-xl-5 m-auto">
             <VenueLayout venue={venue} />
             <MyCalendar venue={venue} onDatesSelected={handleDatesSelected} />
             <div className="d-flex flex-column my-5">
