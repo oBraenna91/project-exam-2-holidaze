@@ -19,7 +19,7 @@ export function AdminCard({ venue }) {
                     <Card.Title className="my-3 h2">{name.toUpperCase()}</Card.Title>
                     <p>{location.address}, {location.city}</p>
                     <p>{location.country}</p>
-                    <Link to={`/admin/venue/${venue.id}`}><CustomButton label="Click for more" /></Link>
+                    <Link to={`/admin/venue/${venue.id}`}><CustomButton className="text-primary" label="Click for more" /></Link>
                 </Card.Body>
             </Card>
         </div>
