@@ -16,7 +16,7 @@ function TotalAmountCalculator({ selectedBookingDates, venuePrice }) {
   return (
     <div className="mb-4">
       {numberOfDays > 0 && <p>Number of nights: {numberOfDays}</p>}
-      {totalAmount > 0 && <p>Total Amount: {totalAmount} $</p> }
+      {totalAmount > 0 && <p className="total-amount">Total Amount: {totalAmount} $</p> }
     </div>
   );
 }
