@@ -46,28 +46,28 @@ export function UpdateVenueForm({ initialValues, onSubmit }) {
             />
             <div className="d-flex flex-column">
                 <p className="m-auto">Wifi</p>
-                <input className="col-6 my-1 m-auto"
+                <input className="col-6 my-1 m-auto checkbox"
                 type="checkbox"
                 {...register('meta.wifi')}
                 />
             </div>
             <div className="d-flex flex-column">
                 <p className="m-auto">Parking</p>
-                <input className="col-6 my-1 m-auto"
+                <input className="col-6 my-1 m-auto checkbox"
                 type="checkbox"
                 {...register('meta.parking')}
                 />
             </div>
             <div className="d-flex flex-column">
                 <p className="m-auto">Breakfast</p>
-                <input className="col-6 my-1 m-auto"
+                <input className="col-6 my-1 m-auto checkbox"
                 type="checkbox"
                 {...register('meta.breakfast')}
                 />
             </div>
             <div className="d-flex flex-column">
                 <p className="m-auto">Pets allowed</p>
-                <input className="col-6 my-1 m-auto"
+                <input className="col-6 my-1 m-auto checkbox"
                 type="checkbox"
                 {...register('meta.pets')}
                 />
