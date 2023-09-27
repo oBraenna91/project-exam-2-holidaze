@@ -64,7 +64,7 @@ export function AdminVenueDetails({ venue }) {
                     <div className="col-3">
                         {meta.breakfast ? <BreakfastIcon /> : <NoBreakfastIcon /> }
                     </div>
-                    <p className="my-0">Breakast included: {meta.breakfast ? 'Yes' : 'No'}</p>
+                    <p className="my-0">Breakfast included: {meta.breakfast ? 'Yes' : 'No'}</p>
                 </div>
                 <div className="col-8 col-md-3 my-3 d-flex align-items-center justify-content-between">
                     <div className="col-3">
