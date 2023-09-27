@@ -27,13 +27,10 @@ export function VenueDetails({ venue }) {
 
       const handleBookingRequest = async () => {
         if (!isLoggedIn) {
-            // User is not logged in, show alert and redirect to /login
             alert('You are not logged in');
             window.location.href = '/login';
-            return; // Prevent further execution of booking request
+            return;
         }
-    
-        // User is logged in, proceed with the booking request
         const [startDate, endDate] = selectedBookingDates;
     
         const bookingRequest = {
@@ -60,51 +57,14 @@ export function VenueDetails({ venue }) {
         }
     };
 
-    //   const handleBookClick = () => {
-    //     if (!isLoggedIn) {
-    //         // User is not logged in, show alert and redirect to /login
-    //         alert('You are not logged in');
-    //         window.location.href= '/login';
-    //     }else{
-            
-    //     }
-    //   }
-
-    
-
-    // const handleBookingRequest = async () => {
-    //     const [startDate, endDate] = selectedBookingDates;
-
-    //     const bookingRequest = {
-    //         dateFrom: startDate.toISOString(),
-    //         dateTo: endDate.toISOString(),
-    //         guests: numGuests,
-    //         venueId: venue.id,
-    //     };
-    //     try {
-    //         console.log(bookingRequest);
-    //         const response = await authFetch(BOOKINGS_URL, { 
-    //             method: 'POST',
-    //             body: JSON.stringify(bookingRequest)
-    //         });
-    //         const result = await response.json();
-    //         console.log(result);
-    //         if(response.ok){
-    //             alert('Booking created!')
-    //         }
-    //     }catch(error){
-    //         console.log('Error', error);
-    //     }
-    // };
-
     return(
         <div className="col-lg-6 col-xl-5 m-auto">
             <VenueLayout venue={venue} />
             <MyCalendar venue={venue} onDatesSelected={handleDatesSelected} />
             <div className="d-flex flex-column my-5">
-                <label>
+                <label className="d-flex flex-column justify-content-center align-items-center">
                     Number of guests:
-                    <select id="guestSelector" value={numGuests} onChange={handleNumGuestsChange}>
+                    <select className="mt-2 guests-selector" id="guestSelector" value={numGuests} onChange={handleNumGuestsChange}>
                         {dropdownOptions.map((option) => (
                             <option key={option} value={option}>
                                 {option}
