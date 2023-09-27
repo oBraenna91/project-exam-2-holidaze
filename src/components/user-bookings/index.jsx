@@ -1,7 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-// import { Link } from 'react-router-dom';
-// import logoImage from '../../logo/dark_logo.png';
 import BreakfastIcon from '../icons/breakfast';
 import WifiIcon from '../icons/wifi';
 import ParkingIcon from '../icons/parking';
@@ -23,7 +21,7 @@ export function BookingCard({ booking }) {
         const date = new Date(dateString);
         const day = date.getDate().toString();
         const month = (date.getMonth() + 1).toString();
-        const year = date.getFullYear().toString().slice(-2); // Get the last 2 digits of the year
+        const year = date.getFullYear().toString().slice(-2);
         return `${day}/${month}/${year}`;
       }
 
@@ -63,7 +61,6 @@ export function BookingCard({ booking }) {
 
     }
 
-    // const mediaUrl = venue.media.length > 0 ? venue.media[0] : logoImage;
   return (
     <Card className="my-3 shadow-lg booking-card m-auto">
       <div className="card-image-container">
