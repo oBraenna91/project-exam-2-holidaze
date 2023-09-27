@@ -35,7 +35,7 @@ export function AdminSpecificVenue() {
       const bookings = specificVenue.bookings;
 
       return (
-          <div>
+          <div className="col-lg-6 col-xl-5 m-auto">
             <h1 className="my-3">Administrate your venue</h1>
             <AdminVenueDetails venue={specificVenue} />
             <h2 className="my-3">Bookings for this venue</h2>
