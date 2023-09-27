@@ -24,12 +24,14 @@ export function LoginForm() {
         <form onSubmit={handleSubmit}>
           <label>
             <input 
-            className="mt-3 form-input"
+            className="my-3 form-input"
             type="email" 
             value={email} 
             onChange={(e) => setEmail(e.target.value)} 
-            placeholder="E-mail"/>
+            placeholder="E-mail"
+            />
           </label>
+          {/* <p className="text-danger">Please enter e-mail</p> */}
           <br />
           <label>
             <input 
@@ -40,6 +42,7 @@ export function LoginForm() {
             placeholder="Password"
             />
           </label>
+          {/* <p className="text-danger">Please enter password</p> */}
           <br />
           <CustomButton 
           label="Log in"
