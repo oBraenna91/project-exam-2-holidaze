@@ -11,19 +11,19 @@ export function CustomModal({ buttonTitle, title, body }) {
 
   return (
     <div>
-    <CustomButton 
-    onClick={handleShow}
-      label={buttonTitle}
-    />
+      <CustomButton 
+      onClick={handleShow}
+        label={buttonTitle}
+      />
 
-    <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton>
-        <Modal.Title>{title}</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-          {body}
-      </Modal.Body>
-    </Modal>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+            {body}
+        </Modal.Body>
+      </Modal>
   </div>
   );
 }
