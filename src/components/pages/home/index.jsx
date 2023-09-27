@@ -1,6 +1,5 @@
-// import SearchBar from "../../search-bar";
 import React from 'react';
-import { VenueCard } from "../../card";
+import { VenueCard } from "../../venue-card";
 import useApi from '../../../hooks/useApi';
 import { VENUES_URL } from '../../../constants';
 import SearchBar from '../../search-bar';
@@ -31,14 +30,6 @@ export function Home() {
                 ))}
             </div>
         </div>
-        // <div className="d-flex flex-column align-items-center my-3">
-        //     <SearchBar venues={venues}/>
-        //     <h1 className="mb-5">WELCOME TO HOLIDAZE</h1>
-        //     {venues.map((venue) => (
-        //         <VenueCard key={venue.id} venue={venue} />
-        //     ))}
-            
-        // </div>
     );
 }
 
