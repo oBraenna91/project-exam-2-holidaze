@@ -74,7 +74,7 @@ export function VenueDetails({ venue }) {
                 </label>
             </div>
             <TotalAmountCalculator selectedBookingDates={selectedBookingDates} venuePrice={venue.price} />
-            <CustomButton onClick={handleBookingRequest} label="Book" />
+            <CustomButton className="text-primary" onClick={handleBookingRequest} label="Book" />
         </div>
         
     )
