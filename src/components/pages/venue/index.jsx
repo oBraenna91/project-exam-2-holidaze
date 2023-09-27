@@ -8,9 +8,6 @@ export function SpecificVenue() {
     const { id } = useParams();
     const { specificVenue, isLoading, isError } = useSpecificIdApi(id);
     
-    console.log(specificVenue);
-     
-
     if (isLoading || !specificVenue) {
         return <div className="text-secondary text-center">Loading...</div>;
       }
