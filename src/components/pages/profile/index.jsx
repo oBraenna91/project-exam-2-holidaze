@@ -8,8 +8,6 @@ export function ProfilePage() {
 
     const name = retrieveName();
     const { specificProfile, isLoading, isError } = useSpecificProfile(name);
-    
-    console.log(specificProfile);
 
     if (isLoading || !specificProfile) {
         return <div className="text-secondary text-center">Loading...</div>;
