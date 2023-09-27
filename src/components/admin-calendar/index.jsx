@@ -3,7 +3,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
 export function AdminCalendar({ bookings }) {
-  // Create an array of all the dates within the bookings
+  
   const disabledDates = [];
   bookings.forEach((booking) => {
     const startDate = new Date(booking.dateFrom);
@@ -17,7 +17,7 @@ export function AdminCalendar({ bookings }) {
   });
 
   function tileContent({ date, view }) {
-    const isTileDisabled = tileDisabled({ date, view }); // Check if the tile is disabled
+    const isTileDisabled = tileDisabled({ date, view });
   
     if (isTileDisabled) {
       return (
@@ -31,7 +31,6 @@ export function AdminCalendar({ bookings }) {
   }
 
   function tileDisabled({ date }) {
-    // Check if the date is in the list of disabled dates
     return disabledDates.some((disabledDate) => date.getTime() === disabledDate.getTime());
   }
 
