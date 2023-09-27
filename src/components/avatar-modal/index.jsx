@@ -18,7 +18,8 @@ export function AvatarModal() {
       alert('Avatar updated!')
       window.location.reload();
     } catch (error) {
-      console.error('Failed to update avatar', error);
+      alert('Failed to update avatar - please make sure the URL is full and publicy accessible',);
+      window.location.reload();
     }
   };
 
@@ -27,6 +28,7 @@ export function AvatarModal() {
         <CustomButton 
           onClick={handleShow}
           label="Update Avatar"
+          className="text-primary"
         />
 
         <Modal show={show} onHide={handleClose}>
@@ -44,6 +46,7 @@ export function AvatarModal() {
             <Modal.Footer>
             <ConfirmationModal
             buttonTitle="Update avatar"
+            buttonClass="text-primary"
             title="Are you sure?"
             body="Are you sure you want to update your avatar?"
             onClick={handleUpdateAvatar}
