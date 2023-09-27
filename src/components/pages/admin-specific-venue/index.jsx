@@ -14,13 +14,11 @@ export function AdminSpecificVenue() {
 
     const handleDeleteVenue = async () => {
         try {
-          // Call the removeVenue function with the venue id
           await removeVenue(id);
           alert('Venue deleted')
           window.location.href= '/admin';
         } catch (error) {
           console.error('Failed to delete venue:', error);
-          // Handle error
         }
       };
      
@@ -47,12 +45,12 @@ export function AdminSpecificVenue() {
             <AdminCalendar bookings={bookings}/>
             <div>
               <ConfirmationModal 
-              buttonTitle="Delete venue"
-              buttonClass="bg-danger"
-              title="Delete this venue" 
-              body="Are you sure you want to delete this venue?" 
-              onClick={handleDeleteVenue} 
-              confirmation="Yes, delete venue"
+                buttonTitle="Delete venue"
+                buttonClass="bg-danger"
+                title="Delete this venue" 
+                body="Are you sure you want to delete this venue?" 
+                onClick={handleDeleteVenue} 
+                confirmation="Yes, delete venue"
               />
             </div>
           </div>
