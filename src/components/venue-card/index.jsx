@@ -28,7 +28,7 @@ export function VenueCard({ venue }) {
             <p className="mini-location">{location.city}, {location.country}</p>
         </div>
         <RenderIcons meta={meta} />
-        <Link to={`venue/${id}`}><CustomButton className="mt-4" label="More info" /></Link>
+        <Link to={`venue/${id}`}><CustomButton className="mt-4 text-primary" label="More info" /></Link>
       </Card.Body>
     </Card>
   );
