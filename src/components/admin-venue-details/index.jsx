@@ -80,6 +80,7 @@ export function AdminVenueDetails({ venue }) {
               <CustomModal
                 title="Update This Venue"
                 buttonTitle="Update venue"
+                buttonClassName="text-primary"
                 body={<UpdateVenueForm initialValues={venue} onSubmit={onSubmit} />}
               />
             </div>
