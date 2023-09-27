@@ -13,7 +13,7 @@ export function MiniCard({ venue }) {
             </Link>
         </div>
         <div className="mini-card-location-container d-flex m-auto justify-content-center">
-            <div className="col-1 me-2">
+            <div className="col-1 me-3">
               <BlueLocationIcon key="location-icon"/>
             </div>
             <p className="mini-location">{location.city}, {location.country}</p>
