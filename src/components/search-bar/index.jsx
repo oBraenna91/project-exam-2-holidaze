@@ -15,9 +15,6 @@ export function SearchBar(props) {
             placeholder="Search.."
             onChange={handleSearchValueChange}
             />
-        {/* <div class="col-1">
-                <SearchIcon />
-            </div> */}
         </Form>
         {searchValue && (
             <div className="mt-1 mb-5 p-5 shadow-lg rounded-5">
