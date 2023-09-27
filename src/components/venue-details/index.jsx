@@ -31,6 +31,12 @@ export function VenueDetails({ venue }) {
             window.location.href = '/login';
             return;
         }
+
+        if (selectedBookingDates.length !== 2) {
+            alert('Please select check-in and check-out dates');
+            return;
+          }
+
         const [startDate, endDate] = selectedBookingDates;
     
         const bookingRequest = {
