@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CustomButton from '../button';
 import Modal from 'react-bootstrap/Modal';
 
-export function CustomModal({ buttonTitle, title, body }) {
+export function CustomModal({ buttonTitle, buttonClassName, title, body }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -14,6 +14,7 @@ export function CustomModal({ buttonTitle, title, body }) {
       <CustomButton 
       onClick={handleShow}
         label={buttonTitle}
+        className={buttonClassName}
       />
 
       <Modal show={show} onHide={handleClose}>
