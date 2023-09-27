@@ -44,9 +44,9 @@ export function RegistrationForm() {
           <input className="my-3 form-input" placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
         <br />
-        <label>
+        <label className="d-flex flex-column justify-content-center align-items-center">
           Admin:
-          <input className="form-input" type="checkbox" checked={venueManager} onChange={(e) => setVenueManager(e.target.checked)} />
+          <input className="form-input checkbox" type="checkbox" checked={venueManager} onChange={(e) => setVenueManager(e.target.checked)} />
         </label>
         <br />
         <CustomButton 
