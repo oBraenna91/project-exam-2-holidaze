@@ -144,7 +144,7 @@ export function CreateVenueForm() {
             })}
             />
             <CustomButton 
-            className="mt-3 col-7 m-auto" 
+            className="mt-3 col-7 m-auto text-primary" 
             label="Create venue" 
             onClick={handleSubmit(onSubmit)}
             />
