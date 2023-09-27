@@ -4,23 +4,18 @@ import 'react-calendar/dist/Calendar.css';
 
 export function MyCalendar({ venue, onDatesSelected }) {
     
-    const [selectedDates, setSelectedDates] = useState([]); // Initialize with an empty array
-    const [view, setView] = useState('month'); // Track the calendar view
+    const [selectedDates, setSelectedDates] = useState([]);
+    const [view, setView] = useState('month');
 
     const handleDateChange = (date) => {
         
-        // When no date is selected, set the start date
         if (selectedDates.length === 0 || selectedDates.length === 2) {
         setSelectedDates([date]);
         } else if (selectedDates.length === 1 && date < selectedDates[0]) {
-            // When one date is already selected, and the new date is earlier, swap them
             setSelectedDates([date, selectedDates[0]]);
         } else {
-        // When one date is already selected, set it as the end date
         setSelectedDates([...selectedDates, date]);
         }
-
-        // Toggle the calendar view between 'month' and 'day' to restrict date range selection
         setView(view === 'month' ? 'day' : 'month');
     };
 
@@ -30,7 +25,6 @@ export function MyCalendar({ venue, onDatesSelected }) {
         const startDate = new Date(booking.dateFrom);
         const endDate = new Date(booking.dateTo);
       
-        // Create an array of dates between startDate and endDate
         const dateRange = [];
         let currentDate = startDate;
       
@@ -39,7 +33,6 @@ export function MyCalendar({ venue, onDatesSelected }) {
           currentDate.setDate(currentDate.getDate() + 1);
         }
       
-        // Merge dateRange into the dates array
         return [...dates, ...dateRange];
       }, []);
       
@@ -51,15 +44,13 @@ export function MyCalendar({ venue, onDatesSelected }) {
               date1.getFullYear() === date2.getFullYear()
             );
           }
-        // Disable tiles in month view only
         if (view === 'month') {
-          // Check if the date is in the list of disabled dates
           return disabledDates.find(dDate => isSameDay(dDate, date));
         }
       }
 
       function tileContent({ date, view }) {
-        const isTileDisabled = tileDisabled({ date, view }); // Check if the tile is disabled
+        const isTileDisabled = tileDisabled({ date, view });
       
         if (isTileDisabled) {
           return (
