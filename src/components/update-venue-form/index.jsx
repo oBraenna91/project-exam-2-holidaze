@@ -118,7 +118,7 @@ export function UpdateVenueForm({ initialValues, onSubmit }) {
             />
             <CustomButton
             label="Update"
-            className="col-7 m-auto mt-3"
+            className="col-7 m-auto mt-3 text-primary"
             onClick={handleSubmit(onSubmit)}
             />
         </form>
