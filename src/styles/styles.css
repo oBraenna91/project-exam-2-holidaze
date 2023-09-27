@@ -13809,11 +13809,18 @@ fieldset:disabled .btn {
 .checkbox {
   width: 25px;
   height: 25px;
-  border-radius: 100%;
 }
 
 .checkbox:hover {
   cursor: pointer;
+}
+
+.guests-selector {
+  width: 50px;
+  height: 25px;
+  border-radius: 20px;
+  border-color: #1D369D;
+  padding-left: 3px;
 }
 
 /* TYPOGRAPHY */
@@ -13827,6 +13834,10 @@ h2, .h2 {
   font-weight: 600;
 }
 
+p {
+  color: #1D369D;
+}
+
 .nav-link {
   font-size: large;
 }
@@ -13835,7 +13846,7 @@ h2, .h2 {
   text-decoration: underline;
 }
 
-.underline-text {
+.underline-text, .total-amount {
   text-decoration: underline;
 }
 
