@@ -14,6 +14,7 @@ export function CreateVenueModal() {
       <CustomButton 
         onClick={handleShow}
         label="Create new venue"
+        className="text-primary"
       />
 
     <Modal show={show} onHide={handleClose}>
