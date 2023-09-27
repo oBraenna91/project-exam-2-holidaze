@@ -13806,6 +13806,16 @@ fieldset:disabled .btn {
   max-width: 70%;
 }
 
+.checkbox {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+
+.checkbox:hover {
+  cursor: pointer;
+}
+
 /* TYPOGRAPHY */
 h1, .h1 {
   color: #1D369D;
