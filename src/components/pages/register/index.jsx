@@ -52,7 +52,7 @@ export function RegistrationForm() {
         <CustomButton 
           label="Register"
           onClick={handleSubmit}
-          className="my-4"
+          className="my-4 text-primary"
           />
       </form>
       <div style={{ height: '20vh' }}></div>

@@ -31,7 +31,6 @@ export function LoginForm() {
             placeholder="E-mail"
             />
           </label>
-          {/* <p className="text-danger">Please enter e-mail</p> */}
           <br />
           <label>
             <input 
@@ -42,10 +41,10 @@ export function LoginForm() {
             placeholder="Password"
             />
           </label>
-          {/* <p className="text-danger">Please enter password</p> */}
           <br />
           <CustomButton 
           label="Log in"
+          className="text-primary"
           onClick={handleSubmit}
           />
         </form>
