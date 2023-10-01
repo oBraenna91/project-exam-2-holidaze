@@ -13745,7 +13745,6 @@ fieldset:disabled .btn {
 }
 
 .venue-card, .booking-card {
-  /* min-height: 440px; */
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(33.33% - 10px);
           flex: 0 0 calc(33.33% - 10px);

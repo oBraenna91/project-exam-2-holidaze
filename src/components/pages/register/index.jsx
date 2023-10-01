@@ -55,6 +55,7 @@ export function RegistrationForm() {
           className="my-4"
           />
       </form>
+      <div style={{ height: '20vh' }}></div>
     </div>
   );
 }
