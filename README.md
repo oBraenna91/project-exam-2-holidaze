@@ -73,6 +73,8 @@ npm i
 npm run build
 ```
 
+All the icons are used with flaticon premium.
+
 For any questions, please do not hesitate to contact me:
 
 ole.braenna@gmail.com
