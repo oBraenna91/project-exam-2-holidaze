@@ -16,7 +16,7 @@ export function VenueLayout({ venue }) {
     return (
         <div>
             <h1 className="my-5">{name}</h1>
-            <div className="col-12 col-md-6 m-auto">
+            <div className="col-12 col-md-8 col-lg-10 m-auto">
                 <Image src={mediaUrl} alt={name} fluid />
             </div>
             <h2 className="mt-5">Location:</h2>
