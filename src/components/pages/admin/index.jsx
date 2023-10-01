@@ -31,6 +31,7 @@ export function AdminPage() {
                   </div>
                 ))}
               </div>
+              <div style={{ height: '80vh' }}></div>
           </div>
       );
     }

@@ -8,7 +8,7 @@ export function ProfileLayout({ profile }) {
     const {name, avatar, venueManager, bookings} = profile;
     const avatarUrl = avatar ? avatar : alternativeAvatar;
 
-    const currentDate = new Date(); // Get the current date
+    const currentDate = new Date();
         const upcomingBookings = bookings
         .filter((booking) => {
             const bookingDate = new Date(booking.dateFrom); 
@@ -17,13 +17,10 @@ export function ProfileLayout({ profile }) {
         .sort((bookingA, bookingB) => {
             const dateA = new Date(bookingA.dateFrom);
             const dateB = new Date(bookingB.dateFrom);
-            return dateA - dateB; // Sort in ascending order (earliest first)
+            return dateA - dateB;
         });
 
-    // const previousBookings = bookings.filter((booking) => {
-    //     const bookingDate = new Date(booking.dateTo); 
-    //     return bookingDate < currentDate;
-    //     });
+
     return (
         <div>
             <h1 className="my-5">Profile</h1>
@@ -49,6 +46,7 @@ export function ProfileLayout({ profile }) {
                 ))}
                 </div>
             </div>
+            <div style={{ height: '50vh' }}></div>
         </div>
     )
 }

@@ -13,7 +13,7 @@ export function LoginPage() {
                   Not registered yet?
               </h2>
               <p className="">Click <Link to="/register">here</Link> to register</p>
-              <div style={{ height: '50vh' }}></div>
+              <div style={{ height: '60vh' }}></div>
           </div>
         
       );

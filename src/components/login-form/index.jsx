@@ -1,58 +1,6 @@
 import React from 'react';
 import loginUser from '../../hooks/auth/login';
 import CustomButton from '../button';
-
-// export function LoginForm() {
-//     const [email, setEmail] = useState('');
-//     const [password, setPassword] = useState('');
-  
-//     const handleSubmit = async (e) => {
-//       e.preventDefault();
-  
-//       try {
-//         const loginData = extractLoginData(email, password);
-//         await loginUser(loginData) 
-//       } catch (error) {
-//         console.error('Error logging in:', error);
-//       }
-//     };
-  
-//     return (
-//       <div>
-//         <h2 className="mt-5">Login</h2>
-//         <form onSubmit={handleSubmit}>
-//           <label>
-//             <input 
-//             className="my-3 form-input"
-//             type="email" 
-//             value={email} 
-//             onChange={(e) => setEmail(e.target.value)} 
-//             placeholder="E-mail"
-//             />
-//           </label>
-//           <br />
-//           <label>
-//             <input 
-//             className="my-3 form-input"
-//             type="password" 
-//             value={password} 
-//             onChange={(e) => setPassword(e.target.value)} 
-//             placeholder="Password"
-//             />
-//           </label>
-//           <br />
-//           <CustomButton 
-//           label="Log in"
-//           className="text-primary"
-//           onClick={handleSubmit}
-//           />
-//         </form>
-//       </div>
-//     );
-//   }
-  
-//   export default LoginForm;
-
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { loginFormValidation } from '../../helpers/login-form-validation';
@@ -89,6 +37,7 @@ export function LoginForm() {
                   <input
                     className="form-input text-primary px-3 py-1"
                     placeholder="Password"
+                    type="password"
                     {...register('password')}
                   />
                   
@@ -99,8 +48,7 @@ export function LoginForm() {
                     onClick={handleSubmit(onSubmit)}
                     />
                 </form>
-      </div>
-      <div style={{ height: '30vh' }}></div>
+              </div>
           </div>
         
       );
