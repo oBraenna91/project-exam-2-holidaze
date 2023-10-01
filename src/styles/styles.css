@@ -13724,6 +13724,7 @@ fieldset:disabled .btn {
   }
 }
 
+/* NAVBAR */
 .navbar {
   padding: 0;
 }
@@ -13744,6 +13745,7 @@ fieldset:disabled .btn {
   background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 1%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
 }
 
+/* CARDS */
 .venue-card, .booking-card {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(33.33% - 10px);
@@ -13785,6 +13787,7 @@ fieldset:disabled .btn {
   border-top-right-radius: 20px;
 }
 
+/* BUTTON */
 .custom-button {
   background-color: #93DB91;
   border: none;
@@ -13797,6 +13800,7 @@ fieldset:disabled .btn {
   text-decoration: underline;
 }
 
+/* SEARCH BAR */
 .search-bar {
   border: 2px solid #1D369D;
 }
@@ -13805,6 +13809,7 @@ fieldset:disabled .btn {
   max-width: 70%;
 }
 
+/* CHECKBOX */
 .checkbox {
   width: 25px;
   height: 25px;
@@ -13814,6 +13819,7 @@ fieldset:disabled .btn {
   cursor: pointer;
 }
 
+/* DROPDOWN-SELECTOR */
 .guests-selector {
   width: 50px;
   height: 25px;
@@ -13833,8 +13839,18 @@ h2, .h2 {
   font-weight: 600;
 }
 
+h3, .h3 {
+  color: #1D369D;
+  font-weight: 500;
+}
+
 p {
   color: #1D369D;
+  font-weight: 300;
+}
+
+.card-p {
+  font-weight: 400;
 }
 
 .nav-link {
@@ -13851,6 +13867,14 @@ p {
 
 .underline-text, .total-amount {
   text-decoration: underline;
+}
+
+.meta {
+  font-weight: 400;
+}
+
+.booking-card-location {
+  color: #1D369D;
 }
 
 /* REACT CALENDAR */

@@ -53,11 +53,11 @@ export function VenueDetails({ venue }) {
                 body: JSON.stringify(bookingRequest),
             });
             const result = await response.json();
-            console.log(result);
             if (response.ok) {
                 alert('Booking created!');
                 window.location.reload();
             }
+            return result;
         } catch (error) {
             console.log('Error', error);
         }

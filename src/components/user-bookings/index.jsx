@@ -70,11 +70,13 @@ export function BookingCard({ booking }) {
         <Card.Title className="my-3 h2">{name.toUpperCase()}</Card.Title>
           <div className="mb-4 d-flex m-auto justify-content-center align-items-center">
             <div className="col-1 me-2"><BlueLocationIcon /></div>
-            {location.city}, {location.country}
+            <div className="booking-card-location">
+              {location.city}, {location.country}
+            </div>
           </div>
-          <div>Check-in: {formatDate(dateFrom)}</div>
-          <div>Check-out: {formatDate(dateTo)}</div>
-          <div>Guests: {guests}</div>
+          <p className="card-p">Check-in: {formatDate(dateFrom)}</p>
+          <p className="card-p">Check-out: {formatDate(dateTo)}</p>
+          <p className="card-p">Guests: {guests}</p>
         <div className="d-flex my-3 justify-content-between">
                 {renderIcons(meta)}
             </div>

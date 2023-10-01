@@ -45,7 +45,7 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to="/" className="text-white nav-link" aria-label="Venues">Venues</Nav.Link>
-            <Link to={`/profile`} onClick={handleProfileClick} className="text-white nav-link">Profile</Link>
+            <Nav.Link as={NavLink} to={`/profile`} onClick={handleProfileClick} className="text-white nav-link" aria-label="Profile">Profile</Nav.Link>
             {isVenueManager && (
                 <Nav.Link as={NavLink} to="/admin" className="text-white" aria-label="Admin">
                     Admin

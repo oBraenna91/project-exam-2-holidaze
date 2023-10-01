@@ -1,6 +1,8 @@
 @import "./variables.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+/* NAVBAR */
+
 .navbar {
     padding: 0;
 }
@@ -19,6 +21,8 @@
 .navbar-toggler-icon {
 background-image: url( "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 1%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
 }
+
+/* CARDS */
 
 .venue-card, .booking-card {
     flex: 0 0 calc(33.33% - 10px);
@@ -59,6 +63,8 @@ background-image: url( "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/200
     border-top-right-radius: 20px;
 }
 
+/* BUTTON */
+
 .custom-button {
     background-color: $secondary;
     border: none;
@@ -71,6 +77,8 @@ background-image: url( "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/200
     }
 }
 
+/* SEARCH BAR */
+
 .search-bar {
     border: 2px solid $primary;
 }
@@ -78,6 +86,8 @@ background-image: url( "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/200
 .search-container {
     max-width: 70%;
 }
+
+/* CHECKBOX */
 
 .checkbox {
     width:25px;
@@ -87,6 +97,8 @@ background-image: url( "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/200
         cursor: pointer;
     }
 }
+
+/* DROPDOWN-SELECTOR */
 
 .guests-selector {
     width: 50px;
@@ -109,8 +121,18 @@ h2 {
     font-weight: 600;
 }
 
+h3 {
+    color: $primary;
+    font-weight: 500;
+}
+
 p {
     color: $primary;
+    font-weight: 300;
+}
+
+.card-p {
+    font-weight: 400;
 }
 
 .nav-link {
@@ -129,6 +151,13 @@ p {
     text-decoration: underline;
 }
 
+.meta {
+    font-weight: 400;
+}
+
+.booking-card-location {
+    color: $primary;
+}
 
 
 /* REACT CALENDAR */

@@ -12,6 +12,8 @@ import ProfilePage from './components/pages/profile';
 import AdminLayout from './components/pages/admin';
 import AdminSpecificVenue from './components/pages/admin-specific-venue';
 import LoginPage from './components/pages/login';
+import ContactPage from './components/pages/contact';
+import AboutPage from './components/pages/about';
 
 function App() {
 
@@ -28,6 +30,8 @@ function App() {
           <Route path="profile" element={<ProfilePage />} />
           <Route path="admin" element={<AdminLayout />} />
           <Route path="admin/venue/:id" element={<AdminSpecificVenue />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="about" element={<AboutPage />}/>
         </Route>
       </Routes>
     </div>
