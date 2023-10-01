@@ -11,10 +11,15 @@ export async function updateVenue(venueData, id) {
         method: 'PUT',
         body: JSON.stringify(venueData),
       });
-      if(!response.ok) {
-          throw new Error('Failed to update venue')
-      }
       const json = await response.json();
+
+      if(!response.ok) {
+        alert(`Update failed: ${json.errors[0].message}`);
+      }
+      else{
+        alert('Updated successfully!')
+        window.location.reload();
+      }
       return json;
   } catch(error) {
       throw new Error('Failed to update venue'); 

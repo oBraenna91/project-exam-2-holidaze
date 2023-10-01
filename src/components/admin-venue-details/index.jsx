@@ -21,7 +21,7 @@ export function AdminVenueDetails({ venue }) {
     const mediaUrl = media.length > 0 ? media[0] : logoImage;
     const [isUpdating, setIsUpdating] = useState(false);
 
-    const onSubmit = async (data) => {
+    const onSubmit = async (data) => { 
         setIsUpdating(true);
         const venueUpdatedData = {
             ...data,
@@ -32,8 +32,6 @@ export function AdminVenueDetails({ venue }) {
         try {
             await updateVenue(venueUpdatedData, id);
             setIsUpdating(false);
-            alert('Venue updated successfully')
-            window.location.reload();
         } catch(error){
             console.log('Failed', error);
             setIsUpdating(false);
