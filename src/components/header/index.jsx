@@ -24,7 +24,6 @@ function Header() {
     const handleProfileClick = () => {
       
       if (!isLoggedIn) {
-          // User is not logged in, show alert and redirect to /login
           alert('You are not logged in');
           window.location.href= '/login';
       }
@@ -34,7 +33,7 @@ function Header() {
     <Navbar expand="md" className="bg-body-tertiary mx-0">
       <Container className="bg-primary nav-container py-1 px-0 mx-0">
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-dark" />
-        <Navbar.Brand className="col-6 col-md-3 mx-0" href="/">
+        <Navbar.Brand className="col-6 col-md-3 mx-0" as={Link} to="/">
             <Logo />
         </Navbar.Brand>
         <Navbar.Brand className="col-1 d-md-none">
@@ -44,15 +43,15 @@ function Header() {
         </Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/" className="text-white">Venues</Nav.Link>
+            <Nav.Link as={Link} to="/" className="text-white">Venues</Nav.Link>
             <Link to={`/profile`} onClick={handleProfileClick} className="text-white nav-link">Profile</Link>
             {isVenueManager && (
-                <Nav.Link href="/admin" className="text-white">
+                <Nav.Link as={Link} to="/admin" className="text-white">
                     Admin
                 </Nav.Link>
             )}
-            <Nav.Link href="/contact" className="text-white">Contact</Nav.Link>
-            <Nav.Link href="/about" className="text-white">About</Nav.Link>
+            <Nav.Link as={Link} to="/contact" className="text-white">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/about" className="text-white">About</Nav.Link>
             {isLoggedIn ? (
                 <Nav.Link onClick={handleLogout} className="text-white">Log out</Nav.Link>
             ) : (

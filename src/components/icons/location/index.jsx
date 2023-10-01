@@ -11,7 +11,7 @@ export function BlueLocationIcon() {
         height: 'auto',
     };
     
-    return  <Image src={locationIcon} style={imageStyle} />; //fluid />;
+    return  <Image src={locationIcon} style={imageStyle} alt="location-icon"/>; //fluid />;
     
 }
 export default BlueLocationIcon;

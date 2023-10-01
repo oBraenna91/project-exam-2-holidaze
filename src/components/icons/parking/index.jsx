@@ -4,7 +4,7 @@ import parkingIcon from '../../../icons/blue_parking.png';
 
 function ParkingIcon() {
     
-    return  <Image src={parkingIcon} fluid />;
+    return  <Image src={parkingIcon} fluid alt="Parking-included-icon"/>;
     
 }
 export default ParkingIcon;

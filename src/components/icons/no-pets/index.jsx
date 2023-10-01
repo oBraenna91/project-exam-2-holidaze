@@ -4,7 +4,7 @@ import noPetsIcon from '../../../icons/blue_no-pets.png';
 
 function NoPetsIcon() {
     
-    return  <Image src={noPetsIcon} fluid />;
+    return  <Image src={noPetsIcon} fluid alt="Pets-not-allowed-icon"/>;
     
 }
 export default NoPetsIcon;
