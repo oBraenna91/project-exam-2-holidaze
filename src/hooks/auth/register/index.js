@@ -13,10 +13,10 @@ export const registerUser = async (userData) => {
     });
 
     const result = await response.json();
-    console.log(result);
+    
     if (response.ok) {
       alert('Profile registered');
-      window.location.href='/profile';
+      window.location.href='/login';
     } else {
       alert(`Registration failed: ${result.errors[0].message}`);
       window.location.reload();
