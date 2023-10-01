@@ -6,6 +6,7 @@ import { getLocalStorageItem, removeLocalStorageItem } from '../../storage';
 import Logo from '../logo';
 import UserIcon from '../user-icon';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
 
@@ -43,10 +44,10 @@ function Header() {
         </Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/" className="text-white">Venues</Nav.Link>
+            <Nav.Link as={Link} to="/" className="text-white nav-link">Venues</Nav.Link>
             <Link to={`/profile`} onClick={handleProfileClick} className="text-white nav-link">Profile</Link>
             {isVenueManager && (
-                <Nav.Link as={Link} to="/admin" className="text-white">
+                <Nav.Link as={NavLink} to="/admin" className="text-white" activeClassName="active">
                     Admin
                 </Nav.Link>
             )}
