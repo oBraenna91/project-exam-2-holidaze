@@ -13846,6 +13846,10 @@ p {
   text-decoration: underline;
 }
 
+.nav-link.active {
+  text-decoration: underline;
+}
+
 .underline-text, .total-amount {
   text-decoration: underline;
 }
