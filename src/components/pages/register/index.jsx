@@ -45,7 +45,7 @@ export function RegistrationForm() {
         </label>
         <br />
         <label className="d-flex flex-column justify-content-center align-items-center">
-          Admin:
+          Venue Manager:
           <input className="form-input checkbox" type="checkbox" checked={venueManager} onChange={(e) => setVenueManager(e.target.checked)} />
         </label>
         <br />
