@@ -33,7 +33,7 @@ function Header() {
     <Navbar expand="md" className="bg-body-tertiary mx-0">
       <Container className="bg-primary nav-container py-1 px-0 mx-0">
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-dark" />
-        <Navbar.Brand className="col-6 col-md-3 mx-0" as={Link} to="/">
+        <Navbar.Brand className="col-6 col-md-3 mx-0" as={Link} to="/" aria-label="Home">
             <Logo />
         </Navbar.Brand>
         <Navbar.Brand className="col-1 d-md-none">
