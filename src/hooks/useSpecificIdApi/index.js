@@ -15,7 +15,6 @@ export function useSpecificIdApi(id) {
 
         const response = await fetch(url);
         const json = await response.json();
-        console.log(json);
 
         setSpecificVenue({ ...json, bookings: json.bookings });
       } catch (error) {

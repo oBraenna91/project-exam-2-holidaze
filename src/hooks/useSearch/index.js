@@ -14,8 +14,6 @@ function useSearch(venues) {
       const lowerVenueName = venue.name.toLowerCase();
       const location = venue.location;
 
-      // Check if the search value is included in the lowercase venue name
-      // or if it's included in the lowercase city or country of the location
       return (
         lowerVenueName.includes(lowerSearchValue) ||
         (location.city.toLowerCase().includes(lowerSearchValue) ||

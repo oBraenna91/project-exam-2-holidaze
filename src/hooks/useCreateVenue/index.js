@@ -1,5 +1,4 @@
 import { VENUES_URL } from '../../constants';
-//import retrieveName from '../../helpers/retriever';
 import { authFetch } from '../auth/authFetch';
 
 export async function createVenue(venueData) {     

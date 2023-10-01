@@ -17,7 +17,6 @@ export function useSpecificProfile(name) {
 
         const response = await authFetch(url);
         const json = await response.json();
-        console.log(json);
 
         setSpecificProfile(json);
       } catch (error) {
