@@ -2,6 +2,8 @@
 
 <img width="1397" alt="Skjermbilde 2023-10-01 kl  19 55 04" src="https://github.com/oBraenna91/project-exam-2-holidaze/assets/95278401/64e6f0ac-0598-4731-b9a6-e33fd1d46f4b">
 
+The project exam was a task to create an online app for a newly started accomodation company called Holidaze.
+
 ## About:
 
 Our final exam was to create an online app for a company called Holidaze. The criterias for the user stories for the app was as follows:
@@ -34,25 +36,6 @@ https://holidaze-by-oab.netlify.app
   - SASS/SCSS
 * JavaScript
   - React
- 
-## Dependencies
-This project relies on the following dependencies:
-- **@hookform/resolvers** - Version 3.3.1
-- **@testing-library/jest-dom** - Version 5.17.0
-- **@testing-library/react** - Version 13.4.0
-- **@testing-library/user-event** - Version 13.5.0
-- **bootstrap** - Version 5.3.1
-- **react** - Version 18.2.0
-- **react-bootstrap** - Version 2.8.0
-- **react-calendar** - Version 4.6.0
-- **react-dom** - Version 18.2.0
-- **react-hook-form** - Version 7.46.2
-- **react-router-dom** - Version 6.15.0
-- **react-scripts** - Version 5.0.1
-- **styled-components** - Version 5.3.10
-- **web-vitals** - Version 2.1.4
-- **yup** - Version 1.3.0
-- **zustand** - Version 4.4.1
 
 ## Running Locally
 
@@ -70,11 +53,15 @@ This project relies on the following dependencies:
 npm i
 ```
 ```
-npm run build
+npm run start
 ```
 
-All the icons are used with flaticon premium.
+## Contact
 
-For any questions, please do not hesitate to contact me:
+If you have any questions, please do not hesitate to contact me:
 
-ole.braenna@gmail.com
+[LinkedIn](https://www.linkedin.com/in/ole-aleksander-br%C3%A6nna-210666252/)
+
+or by e-mail: ole.braenna@gmail.com
+
+** All the icons are used with flaticon premium.
